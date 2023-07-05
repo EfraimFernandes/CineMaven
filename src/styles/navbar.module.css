@@ -1,0 +1,33 @@
+.navbar {
+    top: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.categoriesBar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #f1f1f9;
+}
+
+.categorie {
+    display: flex;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.logo {
+    margin-left: 2%;
+    margin-right: 5%;
+    background: #5dcead; 
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.35rem;
+    background: -moz-linear-gradient(-63deg,  #5dcead 0%,#e0f7ae 100%); 
+    background: -webkit-linear-gradient(-63deg,  #5dcead 0%,#e0f7ae 100%); 
+    background: linear-gradient(-63deg,  #5dcead 0%,#e0f7ae 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
