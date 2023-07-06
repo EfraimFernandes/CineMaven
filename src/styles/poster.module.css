@@ -1,14 +1,15 @@
-.feature {
-    background-image: url('../components/Images/poster-1.jpeg');
+.poster {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #15151599), url('../../public/Images/poster-1.jpeg');
     display: flex;
     position: absolute;
     top: 0;
     z-index: -1;
     width: 100%;
-    height: 750px;
-    background-size: cover;
+    height: 800px;
+    object-fit: cover;
+    margin-bottom: 50px;
 }
-.featureDesc {
+.posterDesc {
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -16,37 +17,87 @@
     margin-left: 1%;
     height: 30vh;
     max-width: 50%;
-    font-family: 'Catamaran', sans-serif;
 }
 
-.featureTitle {
+.posterTitle {
     color: #5dcead;
     font-size: 3rem;
 }
 
-.featureSinopse {
+.posterSinopse {
     color: aliceblue;
     font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 200;
 }
 
 .botao {
-    background-color: #f3f3f3;
-    color: #353f4c;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-weight: 700;
-    font-size: 1.5rem;
-    transition: 0.5s all ease-in-out;
-    margin: 15px 0;
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: none;
+}
+
+.botao:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.botao:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #353f4c;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
 }
 
 .botao:hover {
-    background-color: #353f4c;
-    color: #f3f3f3;
-    padding: 12px;
-    cursor: pointer;
+  color: #f3f3f3;
+  border: none;
+  cursor: pointer;
+    scale: 1.1;
+    transition: 0.5s all ease-in-out;
+}
+
+.botao:hover:before {
+  top: -35%;
+  background-color: #353f4c;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  cursor: pointer;
+    scale: 1.1;
+    transition: 0.5s all ease-in-out;
+}
+
+.botao:hover:after {
+  top: -45%;
+  background-color: #353f4c;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  cursor: pointer;
     scale: 1.1;
     transition: 0.5s all ease-in-out;
 }

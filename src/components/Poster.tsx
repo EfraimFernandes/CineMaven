@@ -1,19 +1,13 @@
 import {FaBookOpen} from 'react-icons/fa'
 import styles from '../styles/poster.module.css'
-import Image from 'next/image'
-import { features } from 'process'
+import FilmeModel from "@/model/PosterModel";
+
+
 
 export default function Poster() {
     return(
-        <div className={styles.feature}>
-            <div>
-            <div className={styles.featureDesc}>
-                <h1 className={styles.featureTitle}>Nome do filme</h1>
-                <h3 className={styles.featureSinopse}>Descrição do filme que está aqui representado pela imagem Descrição do filme que está aqui representado pela imagem Descrição do filme que está aqui representado pela imagem</h3>
-                <button className={styles.botao}>Ler</button>
-            </div>
-            </div>
-            
-        </div>
+        <FilmeModel 
+        titulo='Us' 
+        sinopse= "Durante uma viagem de férias, uma família se encontra confrontada por um grupo misterioso e aterrorizante de doppelgängers sinistros, idênticos a eles em aparência, mas com comportamentos perturbadores. Conforme a noite avança, a família precisa lutar por suas vidas contra essas estranhas e sombrias figuras que parecem determinadas a destruí-los." />
     )
 }
