@@ -1,0 +1,76 @@
+.catalogo {
+    width: 98%;
+    margin: 20px;
+}
+
+.categoria {
+    color: #f3f3f3;
+    margin-bottom: 10px;
+    font-family: 'Catamaran', monospace;
+    font-size: 2.3rem;
+}
+
+.card {
+    transition: 1s all ease-in-out;
+}
+
+.card:hover .tituloNota,
+.card:hover .botao{
+    display: flex;
+    transition: 1s all ease-in-out;
+}
+
+.filme {
+    width: 350px;
+    background-color: #111111;
+    font-family: 'Catamaran', monospace;
+}
+
+.tituloNota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 1s all ease-in-out;
+}
+
+.titulo {
+    color: aliceblue;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.nota {
+    font-size: 1.5rem;
+}
+
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: none;
+  width: 100%;
+}
+
+.botao:hover {
+    background-color: #353f4c;
+    color: #f3f3f3;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+
+.textoBotao {
+    margin-right: 20px;
+    font-family: 'Catamaran', monospace;
+    font-size: 1.3rem;
+}
