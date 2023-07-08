@@ -1,15 +1,11 @@
-import CatalogoModel from "@/model/CatalogoModel";
-import Her from "../../public/Images/Her.jpeg"
+"use client";
 
+import CatalogoModel from "@/model/CatalogoModel";
 
 export default function Catalogo() {
     return(
         <CatalogoModel
             categoria="Novidades"
-            src={Her}
-            titulo="Her"
-            nota={80.4}
-            corNota="green"
         />
     )
 }

@@ -1,5 +1,6 @@
 .catalogo {
     width: 98%;
+    height: 500px;
     margin: 20px;
 }
 
@@ -9,28 +10,16 @@
     font-family: 'Catamaran', monospace;
     font-size: 2.3rem;
 }
-
-.card {
-    transition: 1s all ease-in-out;
-}
-
-.card:hover .tituloNota,
-.card:hover .botao{
-    display: flex;
-    transition: 1s all ease-in-out;
-}
-
 .filme {
     width: 350px;
+    height: 370px;
+    transition: 1s ease-in-out;
+    border-radius: 5px;
     background-color: #111111;
     font-family: 'Catamaran', monospace;
 }
 
 .tituloNota {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     transition: 1s all ease-in-out;
 }
@@ -39,17 +28,23 @@
     color: aliceblue;
     font-size: 2.2rem;
     font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
 .nota {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0
 }
 
 .botao {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 1s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   overflow: hidden;
   z-index: 1;
   color: #090909;
@@ -66,7 +61,7 @@
     color: #f3f3f3;
     border: none;
     cursor: pointer;
-    transition: 0.5s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 
 .textoBotao {

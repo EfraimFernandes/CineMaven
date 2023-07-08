@@ -1,38 +1,84 @@
-import { faDisplay } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/catalogo.module.css'
-import Image, { StaticImageData } from 'next/image';
-import {FaChevronRight} from 'react-icons/fa'
+import Slider from '@/components/Slider/Slider';
+import FilmeCard from '@/components/FilmeCard';
+import { Her, Emoji, Dark, Aquaman, Image1917 } from '@/components/FilmeImagies';
+import { SwiperProps, SwiperSlide } from 'swiper/react';
 
 
 interface CalogoProps {
     categoria: string
-    src: StaticImageData
-    titulo: string
-    nota: number
-    corNota: string
 }
 
 export default function CatalogoModel(props: CalogoProps) {
+
+    const settings: SwiperProps = {
+        spaceBetween: 10,
+        slidesPerView: 4.99,
+        navigation: true,
+    }
+
     return(
         <div className={styles.catalogo}>
             <h1 className={styles.categoria}>{props.categoria}</h1>
             <div className={styles.listaFilmes}>
-                <div className={styles.filme}>
-                    <div className={styles.card}>
-                        <Image className={styles.imagem} src={props.src} style={{objectFit:"cover"}} width= {350} height= {200} alt="Imagem"/>
-                        <div id='tituloNota' className={styles.tituloNota}>
-                            <div>
-                                <span className={styles.titulo}>{props.titulo}</span>
-                            </div>
-                            <div>
-                                <p className={styles.nota} style={{ color:`${props.corNota}`, display: "flex"}}>{props.nota}</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button className={styles.botao}><p className={styles.textoBotao}>Mais Informações</p><FaChevronRight/></button>
-                        </div>
-                    </div>
-                </div>
+                <Slider settings={settings}>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Her}
+                            titulo="Her"
+                            nota={80.4}
+                            corNota="green"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Dark}
+                            titulo="Dark"
+                            nota={90.7}
+                            corNota="green"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Aquaman}
+                            titulo="Aquaman"
+                            nota={73}
+                            corNota="yellow"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Emoji}
+                            titulo="Emoji O Filme"
+                            nota={45}
+                            corNota="orange"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Image1917}
+                            titulo="1917"
+                            nota={94}
+                            corNota="green"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Emoji}
+                            titulo="Emoji O Filme"
+                            nota={45}
+                            corNota="orange"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <FilmeCard 
+                            src={Emoji}
+                            titulo="Emoji O Filme"
+                            nota={45}
+                            corNota="orange"
+                        />
+                    </SwiperSlide>
+                </Slider>
             </div>
         </div>
     )
