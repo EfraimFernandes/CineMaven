@@ -6,17 +6,20 @@
 
 .categoria {
     color: #f3f3f3;
-    margin-bottom: 10px;
     font-family: 'Catamaran', monospace;
     font-size: 2.3rem;
 }
 .filme {
     width: 350px;
-    height: 370px;
+    height: 360px;
     transition: 1s ease-in-out;
     border-radius: 5px;
     background-color: #111111;
     font-family: 'Catamaran', monospace;
+}
+
+.filme:hover {
+    
 }
 
 .tituloNota {

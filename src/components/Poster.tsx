@@ -1,9 +1,4 @@
-import {FaBookOpen} from 'react-icons/fa'
-import styles from '../styles/poster.module.css'
 import PosterModel from "@/model/PosterModel";
-import Us from "../../public/Images/Us.jpeg"
-
-
 
 export default function Poster() {
     return(

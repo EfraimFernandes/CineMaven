@@ -1,13 +1,9 @@
 import Botao from '@/components/botao';
-import styles from '../styles/poster.module.css'
-import poster from  "../../public/Images/poster-1.jpeg"
-import Image, { StaticImageData } from 'next/image';
+import styles from '../styles/poster.module.css';
 
 interface PosterModel {
     titulo?: string;
     sinopse?: String;
-    ano?: number;
-    nota?: number;
 }
 
 export default function PosterModel(props: PosterModel) {
