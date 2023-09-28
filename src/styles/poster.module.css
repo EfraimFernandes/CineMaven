@@ -41,6 +41,7 @@
   border-radius: 0.5em;
   background: #e8e8e8;
   border: none;
+  outline: none;
 }
 
 .botao:hover {

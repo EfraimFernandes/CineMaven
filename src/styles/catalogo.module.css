@@ -1,6 +1,6 @@
 .catalogo {
     width: 98%;
-    height: 500px;
+    height: 490px;
     margin: 20px;
 }
 
@@ -8,6 +8,7 @@
     color: #f3f3f3;
     font-family: 'Catamaran', monospace;
     font-size: 2.3rem;
+    margin-left: 2%;
 }
 .filme {
     width: 350px;
@@ -16,10 +17,6 @@
     border-radius: 5px;
     background-color: #111111;
     font-family: 'Catamaran', monospace;
-}
-
-.filme:hover {
-    
 }
 
 .tituloNota {
@@ -71,4 +68,9 @@
     margin-right: 20px;
     font-family: 'Catamaran', monospace;
     font-size: 1.3rem;
+}
+
+.slider {
+    background-color: black;
+    z-index: 0;
 }

@@ -1,160 +1,88 @@
+// pages/index.tsx
 import styles from '../styles/catalogo.module.css'
 import Slider from '@/components/Slider/Slider';
-import FilmeCard from '@/components/FilmeCard';
-import { Her, Emoji, Dark, Aquaman, Image1917, KickAss, Oblivion, SpiderMan, Hobbit, StarWars, Storm, Us } from '@/components/FilmeImagies';
 import { SwiperProps, SwiperSlide } from 'swiper/react';
+import { Filme, filmes } from "../components/data/filmes";
+import { useState } from "react";
+import Image from 'next/image'
+import ModalButton from '@/components/ModalButton';
+import FilmeModal from '@/components/FilmeModal';
 
-
-interface CalogoProps {
-    categoria: string
+interface CatalogoProps {
+  categoria: string;
 }
 
-export default function CatalogoModel(props: CalogoProps) {
+export default function CatalogoModel(props: CatalogoProps) {
+  const settings: SwiperProps = {
+    spaceBetween: 10,
+    slidesPerView: 4.99,
+    navigation: true,
+  }
 
-    const settings: SwiperProps = {
-        spaceBetween: 10,
-        slidesPerView: 4.99,
-        navigation: true,
+  const [filtroGenero, setFiltroGenero] = useState<string[]>([]);
+  const [selectedFilme, setSelectedFilme] = useState<Filme | null>(null);
+
+  const openModal = (filme: Filme) => {
+    setSelectedFilme(filme);
+  };
+
+  const closeModal = () => {
+    setSelectedFilme(null);
+  };
+
+  const filmesFiltrados = filmes.filter((filme: Filme) => {
+    if (filtroGenero.length === 0) {
+      return true;
+    } else {
+      return filme.genero.some((cat) => filtroGenero.includes(cat));
     }
+  });
 
-    return(
-        <div className={styles.catalogo}>
-            <h1 className={styles.categoria}>{props.categoria}</h1>
-            <div className={styles.listaFilmes}>
-                <Slider settings={settings}>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Her}
-                            titulo="Her"
-                            nota={80.4}
-                            corNota="green"
-                        />
+  return (
+    <>
+        <h1 className={styles.categoria}>{props.categoria}</h1>
+        <div className={styles.slider}>
+            <Slider settings={settings}>
+                {filmesFiltrados.map((filme: Filme) => (
+                    <SwiperSlide key={filme.id}>
+                        <div className={styles.filme}>
+                            <Image
+                                className={styles.imagem}
+                                src={filme.imagem}
+                                style={{ objectFit: "cover", borderRadius: "5px" }}
+                                width={350}
+                                height={200}
+                                alt="Imagem"
+                                quality={100}
+                            />
+                            <div className={styles.tituloNota}>
+                                <div>
+                                    <span className={styles.titulo}>{filme.titulo}</span>
+                                </div>
+                                <div>
+                                    <p
+                                        className={styles.nota}
+                                        style={{
+                                        color: `${filme.corNota}`,
+                                        display: "flex",
+                                        alignItems: "center",
+                                        }}
+                                    >
+                                        {filme.nota}
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <ModalButton filme={filme} openModal={() => openModal(filme)} />
+                            </div>
+                        </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Dark}
-                            titulo="Dark"
-                            nota={90}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Aquaman}
-                            titulo="Aquaman"
-                            nota={73}
-                            corNota="yellow"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Emoji}
-                            titulo="Emoji O Filme"
-                            nota={45}
-                            corNota="red"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Image1917}
-                            titulo="1917"
-                            nota={94}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={KickAss}
-                            titulo="Kick Ass 2"
-                            nota={87}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Oblivion}
-                            titulo="Oblivion"
-                            nota={65}
-                            corNota="orange"
-                        />
-                    </SwiperSlide>
-                </Slider>
-            </div>
-            <h1 className={styles.categoria}>Ação e Aventura</h1>
-            <div className={styles.listaFilmes}>
-                <Slider settings={settings}>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={SpiderMan}
-                            titulo="Homem Aranha 2"
-                            nota={93}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Hobbit}
-                            titulo="Hobbit"
-                            nota={95}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Aquaman}
-                            titulo="Aquaman"
-                            nota={73}
-                            corNota="yellow"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Image1917}
-                            titulo="1917"
-                            nota={94}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={KickAss}
-                            titulo="Kick Ass 2"
-                            nota={87}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={StarWars}
-                            titulo="Star Wars"
-                            nota={98}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Storm}
-                            titulo="Storm"
-                            nota={77}
-                            corNota="orange"
-                        />
-                    </SwiperSlide>
-                </Slider>
-            </div>
-            <h1 className={styles.categoria}>Terror</h1>
-            <div className={styles.listaFilmes}>
-                <Slider settings={settings}>
-                    <SwiperSlide>
-                        <FilmeCard 
-                            src={Us}
-                            titulo="Us"
-                            nota={93}
-                            corNota="green"
-                        />
-                    </SwiperSlide>
-                    
-                </Slider>
-            </div>
+                ))}
+            </Slider>
         </div>
-    )
+        {selectedFilme && (
+            <FilmeModal filme={selectedFilme} isOpen={true} onRequestClose={closeModal} />
+        )}
+    </>
+  );
 }
