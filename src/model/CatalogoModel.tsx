@@ -10,6 +10,7 @@ import FilmeModal from '@/components/FilmeModal';
 
 interface CatalogoProps {
   categoria: string;
+  corNota: string;
 }
 
 export default function CatalogoModel(props: CatalogoProps) {

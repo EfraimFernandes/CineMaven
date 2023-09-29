@@ -62,6 +62,11 @@
     border: none;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
+    border: none;
+}
+
+.botao:active{
+    border: none;
 }
 
 .textoBotao {
@@ -71,6 +76,16 @@
 }
 
 .slider {
-    background-color: black;
+    position: relative;
+    z-index: 0;
+}
+
+.imagem {
+    position: relative;
+    z-index: 0;
+}
+
+.filme {
+    position: relative;
     z-index: 0;
 }

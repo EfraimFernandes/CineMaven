@@ -17,12 +17,14 @@ const customStyles = {
         marginRight: "-50%",
         transform: "translate(-50%, -50%)",
         // Personalize as propriedades CSS aqui
-        width: "80%", // Largura do modal
-        maxHeight: "80vh", // Altura máxima
-        backgroundColor: "white", // Cor de fundo
+        width: "900px", // Largura do modal
+        height: "700px",
+        backgroundColor: "blue", // Cor de fundo
         borderRadius: "8px", // Borda arredondada
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Sombra
-        zIndex:"1",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        border: "none"
       },
       // Você também pode personalizar o overlay (fundo do modal) aqui
       overlay: {
@@ -37,6 +39,7 @@ const MyModal: React.FC<ModalProps> = ({ isOpen, onRequestClose, children }) => 
       onRequestClose={onRequestClose}
       style={customStyles}
       contentLabel="Exemplo de Modal"
+      ariaHideApp={false}
     >
       {children}
     </Modal>
