@@ -22,9 +22,6 @@ const ModalButton: React.FC<ModalButtonProps> = ({ filme, openModal }) => {
         <p className={styles.textoBotao}>Mais Informações</p>
         <FaChevronRight />
       </button>
-
-      {/* Remova a linha abaixo
-      <FilmeModal filme={filme} isOpen={modalIsOpen} onRequestClose={closeModal} /> */}
     </div>
   );
 };

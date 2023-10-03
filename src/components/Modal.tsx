@@ -1,6 +1,8 @@
 // components/Modal.tsx
 import React from "react";
 import Modal from "react-modal";
+import styles from "../styles/modal.module.css"
+
 
 interface ModalProps {
   isOpen: boolean;
@@ -18,13 +20,14 @@ const customStyles = {
         transform: "translate(-50%, -50%)",
         // Personalize as propriedades CSS aqui
         width: "900px", // Largura do modal
-        height: "700px",
-        backgroundColor: "blue", // Cor de fundo
+        height: "800px",
+        backgroundColor: "#151515", // Cor de fundo
         borderRadius: "8px", // Borda arredondada
+        boxShadow: "0 4px 10px #000", // Sombra
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        border: "none"
+        border: "none",
       },
       // Você também pode personalizar o overlay (fundo do modal) aqui
       overlay: {
@@ -40,6 +43,7 @@ const MyModal: React.FC<ModalProps> = ({ isOpen, onRequestClose, children }) => 
       style={customStyles}
       contentLabel="Exemplo de Modal"
       ariaHideApp={false}
+      className={styles.modal}
     >
       {children}
     </Modal>

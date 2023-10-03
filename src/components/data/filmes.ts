@@ -9,8 +9,8 @@ export interface Filme {
     corNota: string
     categoria: string
     genero: string[]
-    imagem: StaticImageData
-    descricao: string
+    imagemSRC: StaticImageData
+    recomendacao: string 
 }
 
 export const filmes: Filme[] = [
@@ -20,9 +20,9 @@ export const filmes: Filme[] = [
         nota: 90,
         corNota: "green",
         categoria: "Série",
-        genero: ["Drama", "Suspense", "Ficção Científica", "Mistério"],
-        imagem: Dark,
-        descricao: "Dark é uma série alemã de sucesso da Netflix que combina drama e ficção científica. Situada na cidade fictícia de Winden, a trama se desenrola ao redor de quatro famílias interligadas ao longo de várias gerações e envolve misteriosos desaparecimentos e viagens no tempo. A série se destaca por sua narrativa complexa e não linear, explorando temas como livre arbítrio e determinismo, e cria uma atmosfera sombria e intrigante. Dark cativou uma base de fãs dedicada devido à sua escrita inteligente e sua abordagem única das viagens no tempo e das complexidades das relações humanas.",
+        genero: [" Drama  |", " Suspense  |", " Ficção Científica  |", " Mistério  "],
+        imagemSRC: Dark,
+        recomendacao: "Dark é altamente recomendada para aqueles que apreciam séries de ficção científica complexas e envolventes. Esta série alemã da Netflix oferece uma trama intricada que envolve viagens no tempo, segredos familiares sombrios e uma teia de relacionamentos interligados ao longo de diferentes épocas. A narrativa não linear e cheia de mistérios mantém os espectadores intrigados, enquanto os temas filosóficos e aprofundados, como livre arbítrio e determinismo, adicionam profundidade à trama. Se você está em busca de uma série que desafie sua mente e o mantenha envolvido do começo ao fim, Dark é uma escolha excelente.",
     },
     {
         id: 2,
@@ -30,8 +30,8 @@ export const filmes: Filme[] = [
         nota: 94,
         corNota: "green",
         categoria: "Filme",
-        genero: ["Ação", "Ficção", "Drama"],
-        imagem: Image1917,
-        descricao: "1917 é um filme de guerra dirigido por Sam Mendes que se passa durante a Primeira Guerra Mundial. A trama segue dois soldados britânicos encarregados de entregar uma mensagem crucial para evitar uma emboscada. O filme se destaca por sua cinematografia única que simula um único plano sequência, proporcionando uma experiência imersiva. Além disso, é elogiado por suas atuações e por retratar de forma impactante os horrores da guerra.",
+        genero: ["Ação |", " Ficção |", " Drama "],
+        imagemSRC: Image1917,
+        recomendacao: "1917 é altamente recomendado para os amantes de cinema que buscam uma experiência intensa e emocionante. Este filme de guerra dirigido por Sam Mendes oferece uma narrativa envolvente, cinematografia impressionante e atuações cativantes. A maneira como o filme utiliza o formato de plano sequência contínuo cria uma imersão única na atmosfera da Primeira Guerra Mundial e nos desafios enfrentados pelos personagens. Se você aprecia filmes que combinam ação, drama e uma representação vívida de eventos históricos, 1917 certamente é uma excelente escolha.",
     }
 ]

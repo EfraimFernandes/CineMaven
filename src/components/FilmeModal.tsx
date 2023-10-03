@@ -1,8 +1,8 @@
-
+import Image from 'next/image'
 import React from "react";
 import MyModal from "./Modal";
 import { Filme } from "./data/filmes";
-import styles from "../styles/modal.module.css"; // Importe as classes CSS
+import styles from "../styles/modal.module.css"; // Importe as classNamees CSS
 
 interface FilmeModalProps {
   filme: Filme | null;
@@ -14,12 +14,31 @@ const FilmeModal: React.FC<FilmeModalProps> = ({ filme, isOpen, onRequestClose }
   return (
     <MyModal isOpen={isOpen} onRequestClose={onRequestClose}>
       {filme && (
-        <div className={styles.customModal}> {/* Use a classe CSS personalizada */}
-          <h2>{filme.titulo}</h2>
-          <p>{filme.descricao}</p>
-          <p>Nota: {filme.nota}</p>
-          {/* Adicione outras informações relevantes sobre o filme aqui */}
-          <button onClick={onRequestClose}>Fechar</button>
+        <div className={styles.customModal}>
+          <div className={styles.imagem}>
+            <Image 
+              src={filme.imagemSRC}
+              alt={filme.titulo}
+              className={styles.img}
+            />
+          </div>
+          <div>
+          <div className={styles.desc1}>
+            <div className={styles.titulo_generos}>
+              <h1 className={styles.titulo}>{filme.titulo}</h1>
+              <h4 className={styles.generos}>{filme.genero}</h4>
+            </div>
+            <div className={styles.nota} style={{
+              color:`${filme.corNota}`
+            }}>
+              <h2>{filme.nota}</h2>
+            </div>
+          </div>
+          <div className={styles.recomendacao}>
+              <h1>Recomendação</h1>
+              <h2>{filme.recomendacao}</h2>
+          </div>
+          </div>
         </div>
       )}
     </MyModal>

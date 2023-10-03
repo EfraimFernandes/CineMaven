@@ -10,7 +10,6 @@ import FilmeModal from '@/components/FilmeModal';
 
 interface CatalogoProps {
   categoria: string;
-  corNota: string;
 }
 
 export default function CatalogoModel(props: CatalogoProps) {
@@ -49,7 +48,7 @@ export default function CatalogoModel(props: CatalogoProps) {
                         <div className={styles.filme}>
                             <Image
                                 className={styles.imagem}
-                                src={filme.imagem}
+                                src={filme.imagemSRC}
                                 style={{ objectFit: "cover", borderRadius: "5px" }}
                                 width={350}
                                 height={200}
