@@ -28,10 +28,8 @@ const FilmeModal: React.FC<FilmeModalProps> = ({ filme, isOpen, onRequestClose }
               <h1 className={styles.titulo}>{filme.titulo}</h1>
               <h4 className={styles.generos}>{filme.genero}</h4>
             </div>
-            <div className={styles.nota} style={{
-              color:`${filme.corNota}`
-            }}>
-              <h2>{filme.nota}</h2>
+            <div className={styles.nota} style={{display:"flex", alignItems:"center", justifyContent:"center", color:"aliceblue"}}>
+              <h2>Nota: </h2><h2  style={{color:`${filme.corNota}`, marginLeft:"10px"}}>{filme.nota}</h2>
             </div>
           </div>
           <div className={styles.recomendacao}>

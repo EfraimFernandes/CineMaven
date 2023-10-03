@@ -34,11 +34,8 @@
 .logo {
     margin-left: 2%;
     margin-right: 5%;
-    background: #5dcead; 
     font-family: 'Rubik', sans-serif;
     font-size: 1.35rem;
-    background: -moz-linear-gradient(-63deg,  #5dcead 0%,#e0f7ae 100%); 
-    background: -webkit-linear-gradient(-63deg,  #5dcead 0%,#e0f7ae 100%); 
     background: linear-gradient(-63deg,  #5dcead 0%,#e0f7ae 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;

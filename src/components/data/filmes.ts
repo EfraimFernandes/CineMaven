@@ -1,4 +1,4 @@
-import { Her, Emoji, Dark, Aquaman, Image1917, KickAss, Oblivion, SpiderMan, Hobbit, StarWars, Storm, Us } from '@/components/FilmeImagies';
+import { Her, Emoji, Dark, Aquaman, Image1917, KickAss, Oblivion, SpiderMan, Hobbit, StarWars, Us } from '@/components/FilmeImagies';
 import { StaticImageData } from 'next/image';
 
 
@@ -7,7 +7,7 @@ export interface Filme {
     titulo: string
     nota: number
     corNota: string
-    categoria: string
+    tipo: string
     genero: string[]
     imagemSRC: StaticImageData
     recomendacao: string 
@@ -19,19 +19,110 @@ export const filmes: Filme[] = [
         titulo: "Dark",
         nota: 90,
         corNota: "green",
-        categoria: "Série",
+        tipo: "Série",
         genero: [" Drama  |", " Suspense  |", " Ficção Científica  |", " Mistério  "],
         imagemSRC: Dark,
-        recomendacao: "Dark é altamente recomendada para aqueles que apreciam séries de ficção científica complexas e envolventes. Esta série alemã da Netflix oferece uma trama intricada que envolve viagens no tempo, segredos familiares sombrios e uma teia de relacionamentos interligados ao longo de diferentes épocas. A narrativa não linear e cheia de mistérios mantém os espectadores intrigados, enquanto os temas filosóficos e aprofundados, como livre arbítrio e determinismo, adicionam profundidade à trama. Se você está em busca de uma série que desafie sua mente e o mantenha envolvido do começo ao fim, Dark é uma escolha excelente.",
+        recomendacao: "Dark é uma série de ficção científica alemã altamente aclamada da Netflix, conhecida por sua trama complexa e envolvente de viagens no tempo. Recomendada para fãs de mistério e sci-fi. ",
     },
     {
         id: 2,
         titulo: "1917",
         nota: 94,
         corNota: "green",
-        categoria: "Filme",
+        tipo: "Filme",
         genero: ["Ação |", " Ficção |", " Drama "],
         imagemSRC: Image1917,
-        recomendacao: "1917 é altamente recomendado para os amantes de cinema que buscam uma experiência intensa e emocionante. Este filme de guerra dirigido por Sam Mendes oferece uma narrativa envolvente, cinematografia impressionante e atuações cativantes. A maneira como o filme utiliza o formato de plano sequência contínuo cria uma imersão única na atmosfera da Primeira Guerra Mundial e nos desafios enfrentados pelos personagens. Se você aprecia filmes que combinam ação, drama e uma representação vívida de eventos históricos, 1917 certamente é uma excelente escolha.",
+        recomendacao: "1917 é um filme de guerra emocionante e visualmente impressionante, dirigido por Sam Mendes. Ideal para quem gosta de histórias de guerra envolventes e cinematografia de alto nível. ",
+    },
+    {
+        id: 3,
+        titulo: "Her",
+        nota: 90,
+        corNota: "green",
+        tipo: "Filme",
+        genero: ["Drama |", " Ficção Científica "],
+        imagemSRC: Her,
+        recomendacao: "Her é um emocionante filme de ficção científica que explora relacionamentos e inteligência artificial de maneira única. Altamente recomendado para aqueles que apreciam filmes introspectivos e contemplativos.",
+    },
+    {
+        id: 4,
+        titulo: "Emoji",
+        nota: 20,
+        corNota: "red",
+        tipo: "Filme",
+        genero: ["Animação |", " Comédia "],
+        imagemSRC: Emoji,
+        recomendacao: "Emoji: O Filme é uma animação voltada para o público mais jovem, divertida para crianças e adolescentes.",
+    },
+    {
+        id: 5,
+        titulo: "Aquaman",
+        nota: 70,
+        corNota: "orange",
+        tipo: "Filme",
+        genero: ["Ação |", " Aventura "],
+        imagemSRC: Aquaman,
+        recomendacao: "Aquaman é um filme de super-herói da DC Comics, conhecido por suas sequências de ação emocionantes e efeitos visuais impressionantes. Recomendado para fãs de filmes de super-heróis.",
+    },
+    {
+        id: 6,
+        titulo: "Kick Ass 2",
+        nota: 60,
+        corNota: "orange",
+        tipo: "Filme",
+        genero: ["Ação |", " Comédia "],
+        imagemSRC: KickAss,
+        recomendacao: "Kick-Ass 2 é a sequência de um filme de super-herói irreverente e violento, com uma dose saudável de humor negro. Recomendado para quem gostou do primeiro filme.",
+    },
+    {
+        id: 7,
+        titulo: "Oblivion",
+        nota: 72,
+        corNota: "orange",
+        tipo: "Filme",
+        genero: ["Ação |", " Ficção Científica "],
+        imagemSRC: Oblivion,
+        recomendacao:  "Oblivion é um filme de ficção científica estrelado por Tom Cruise, com uma trama envolvente e visuais impressionantes. Recomendado para fãs de ficção científica.",
+    },
+    {
+        id: 8,
+        titulo: "Spider-Man",
+        nota: 92,
+        corNota: "green",
+        tipo: "Filme",
+        genero: ["Ação |", " Aventura |", " Ficção Científica "],
+        imagemSRC: SpiderMan,
+        recomendacao:  "Os filmes do Homem-Aranha são populares entre os fãs de super-heróis. Recomendado para quem gosta de ação e aventura.",
+    },
+    {
+        id: 9,
+        titulo: "O Hobbit: Uma Jornada Inesperada",
+        nota: 98,
+        corNota: "gold",
+        tipo: "Filme",
+        genero: ["Ação |", " Aventura |", " Fantasia "],
+        imagemSRC: Hobbit,
+        recomendacao:  "Os filmes da trilogia O Hobbit são baseados na obra de J.R.R. Tolkien e são ideais para fãs de aventuras épicas e mundos de fantasia.",
+    },
+    {
+        id: 10,
+        titulo: "Star Wars",
+        nota: 95,
+        corNota: "gold",
+        tipo: "Filme",
+        genero: ["Ação |", " Aventura |", " Ficção Científica "],
+        imagemSRC: StarWars,
+        recomendacao:  "Star Wars é uma franquia icônica com filmes e séries para todos os gostos. Recomendado para fãs de ficção científica e aventura espacial.",
+    },
+    {
+        id: 11,
+        titulo: "Us",
+        nota: 85,
+        corNota: "green",
+        tipo: "Filme",
+        genero: ["Terror |", " Thriller "],
+        imagemSRC: Us,
+        recomendacao:  "Us é um filme de terror psicológico dirigido por Jordan Peele, conhecido por sua narrativa intrigante e reviravoltas. Recomendado para fãs de filmes de suspense e terror.",
     }
+    
 ]
