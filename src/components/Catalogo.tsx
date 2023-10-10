@@ -6,7 +6,7 @@ export default function Catalogo() {
     return(
         <div>
             <CatalogoModel
-                categoria="Novidades"/>
+                categoria="Ação"/>
         </div>
     )
 }

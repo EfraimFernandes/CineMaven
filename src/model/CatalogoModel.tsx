@@ -34,7 +34,7 @@ export default function CatalogoModel(props: CatalogoProps) {
     if (filtroGenero.length === 0) {
       return true;
     } else {
-      return filme.genero.some((cat) => filtroGenero.includes(cat));
+      return filme.genero.some((cat) => filtroGenero.includes(props.categoria));
     }
   });
 

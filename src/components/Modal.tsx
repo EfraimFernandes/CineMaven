@@ -19,8 +19,8 @@ const customStyles = {
         marginRight: "-50%",
         transform: "translate(-50%, -50%)",
         // Personalize as propriedades CSS aqui
-        width: "900px", // Largura do modal
-        height: "800px",
+        width: "60%", // Largura do modal
+        height: "80%",
         backgroundColor: "#151515", // Cor de fundo
         borderRadius: "8px", // Borda arredondada
         boxShadow: "0 4px 10px #000", // Sombra
