@@ -5,8 +5,7 @@ import CatalogoModel from "@/model/CatalogoModel";
 export default function Catalogo() {
     return(
         <div>
-            <CatalogoModel
-                categoria="Ação"/>
+            <CatalogoModel/>
         </div>
     )
 }

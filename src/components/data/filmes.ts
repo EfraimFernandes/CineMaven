@@ -8,7 +8,7 @@ export interface Filme {
     nota: number
     corNota: string
     tipo: string
-    genero: string[]
+    genero: string
     imagemSRC: StaticImageData
     recomendacao: string 
 }
@@ -20,7 +20,7 @@ export const filmes: Filme[] = [
         nota: 90,
         corNota: "green",
         tipo: "Série",
-        genero: [" Drama  |", " Suspense  |", " Ficção Científica  |", " Mistério  "],
+        genero: "Drama",
         imagemSRC: Dark,
         recomendacao: "Dark é uma série de ficção científica alemã altamente aclamada da Netflix, conhecida por sua trama complexa e envolvente de viagens no tempo. Recomendada para fãs de mistério e sci-fi. ",
     },
@@ -30,7 +30,7 @@ export const filmes: Filme[] = [
         nota: 94,
         corNota: "green",
         tipo: "Filme",
-        genero: ["Ação |", " Ficção |", " Drama "],
+        genero: "Ação",
         imagemSRC: Image1917,
         recomendacao: "1917 é um filme de guerra emocionante e visualmente impressionante, dirigido por Sam Mendes. Ideal para quem gosta de histórias de guerra envolventes e cinematografia de alto nível. ",
     },
@@ -40,7 +40,7 @@ export const filmes: Filme[] = [
         nota: 90,
         corNota: "green",
         tipo: "Filme",
-        genero: ["Drama |", " Ficção Científica "],
+        genero: "Drama",
         imagemSRC: Her,
         recomendacao: "Her é um emocionante filme de ficção científica que explora relacionamentos e inteligência artificial de maneira única. Altamente recomendado para aqueles que apreciam filmes introspectivos e contemplativos.",
     },
@@ -50,7 +50,7 @@ export const filmes: Filme[] = [
         nota: 20,
         corNota: "red",
         tipo: "Filme",
-        genero: ["Animação |", " Comédia "],
+        genero: "Comédia",
         imagemSRC: Emoji,
         recomendacao: "Emoji: O Filme é uma animação voltada para o público mais jovem, divertida para crianças e adolescentes.",
     },
@@ -60,7 +60,7 @@ export const filmes: Filme[] = [
         nota: 70,
         corNota: "orange",
         tipo: "Filme",
-        genero: [" |", " Aventura "],
+        genero: "Ação",
         imagemSRC: Aquaman,
         recomendacao: "Aquaman é um filme de super-herói da DC Comics, conhecido por suas sequências de ação emocionantes e efeitos visuais impressionantes. Recomendado para fãs de filmes de super-heróis.",
     },
@@ -70,7 +70,7 @@ export const filmes: Filme[] = [
         nota: 60,
         corNota: "orange",
         tipo: "Filme",
-        genero: ["Ação |", " Comédia "],
+        genero: "Ação",
         imagemSRC: KickAss,
         recomendacao: "Kick-Ass 2 é a sequência de um filme de super-herói irreverente e violento, com uma dose saudável de humor negro. Recomendado para quem gostou do primeiro filme.",
     },
@@ -80,7 +80,7 @@ export const filmes: Filme[] = [
         nota: 72,
         corNota: "orange",
         tipo: "Filme",
-        genero: ["Ação |", " Ficção Científica "],
+        genero: "Ficção Científica",
         imagemSRC: Oblivion,
         recomendacao:  "Oblivion é um filme de ficção científica estrelado por Tom Cruise, com uma trama envolvente e visuais impressionantes. Recomendado para fãs de ficção científica.",
     },
@@ -90,7 +90,7 @@ export const filmes: Filme[] = [
         nota: 92,
         corNota: "green",
         tipo: "Filme",
-        genero: ["Ação |", " Aventura |", " Ficção Científica "],
+        genero: "Ação",
         imagemSRC: SpiderMan,
         recomendacao:  "Os filmes do Homem-Aranha são populares entre os fãs de super-heróis. Recomendado para quem gosta de ação e aventura.",
     },
@@ -100,7 +100,7 @@ export const filmes: Filme[] = [
         nota: 98,
         corNota: "green",
         tipo: "Filme",
-        genero: ["Ação |", " Aventura |", " Fantasia "],
+        genero: "Aventura",
         imagemSRC: Hobbit,
         recomendacao:  "Os filmes da trilogia O Hobbit são baseados na obra de J.R.R. Tolkien e são ideais para fãs de aventuras épicas e mundos de fantasia.",
     },
@@ -110,7 +110,7 @@ export const filmes: Filme[] = [
         nota: 95,
         corNota: "green",
         tipo: "Filme",
-        genero: ["Ação |", " Aventura |", " Ficção Científica "],
+        genero: "Ficção Científica",
         imagemSRC: StarWars,
         recomendacao:  "Star Wars é uma franquia icônica com filmes e séries para todos os gostos. Recomendado para fãs de ficção científica e aventura espacial.",
     },
@@ -120,9 +120,8 @@ export const filmes: Filme[] = [
         nota: 85,
         corNota: "green",
         tipo: "Filme",
-        genero: ["Terror |", " Thriller "],
+        genero: "Terror",
         imagemSRC: Us,
         recomendacao:  "Us é um filme de terror psicológico dirigido por Jordan Peele, conhecido por sua narrativa intrigante e reviravoltas. Recomendado para fãs de filmes de suspense e terror.",
     }
-    
 ]
