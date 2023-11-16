@@ -3,7 +3,7 @@ import styles from '../styles/catalogo.module.css';
 import Slider from '@/components/Slider/Slider';
 import { SwiperProps, SwiperSlide } from 'swiper/react';
 import { Filme, filmes } from "../components/data/filmes";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Image from 'next/image';
 import ModalButton from '@/components/ModalButton';
 import FilmeModal from '@/components/FilmeModal';
@@ -25,7 +25,7 @@ export default function CatalogoModel() {
     setSelectedFilme(null);
   };
 
-  const categorias = ["Ação", "Terror", "Drama", "Ficção Científica", "Aventura"]; // Adicione suas categorias aqui
+  const categorias = ["Ação", "Drama", "Ficção Científica", "Aventura", "Animação", "Suspense"]; // Adicione suas categorias aqui
   const [filtroGenero, setFiltroGenero] = useState<string | null>(null);
 
   const filmesPorCategoria = categorias.map(categoria => {
@@ -42,7 +42,7 @@ export default function CatalogoModel() {
           <Slider settings={settings}>
             {filmesFiltrados.map((filme: Filme) => (
               <SwiperSlide key={filme.id}>
-                <div className={styles.filme}>
+                <div className={styles.filme} onClick={() => openModal(filme)}>
                   <Image
                     className={styles.imagem}
                     src={filme.imagemSRC}
@@ -52,7 +52,7 @@ export default function CatalogoModel() {
                     alt="Imagem"
                     quality={100}
                   />
-                  <div className={styles.tituloNota}>
+                  {/* <div className={styles.tituloNota}>
                     <div>
                       <span className={styles.titulo}>{filme.titulo}</span>
                     </div>
@@ -68,10 +68,10 @@ export default function CatalogoModel() {
                         {filme.nota}
                       </p>
                     </div>
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <ModalButton filme={filme} openModal={() => openModal(filme)} />
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
             ))}
@@ -88,7 +88,7 @@ export default function CatalogoModel() {
   return (
     <>
       {filmesPorCategoria}
-      <h1 className={styles.categoria}> Novos </h1>
+      <h1 className={styles.categoria}> Todos </h1>
       <div className={styles.slider}>
         <Slider settings={settings}>
           {filmesFiltrados.map((filme: Filme) => (
@@ -103,7 +103,7 @@ export default function CatalogoModel() {
                   alt="Imagem"
                   quality={100}
                 />
-                <div className={styles.tituloNota}>
+                {/* <div className={styles.tituloNota}>
                   <div>
                     <span className={styles.titulo}>{filme.titulo}</span>
                   </div>
@@ -119,7 +119,7 @@ export default function CatalogoModel() {
                       {filme.nota}
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div>
                   <ModalButton filme={filme} openModal={() => openModal(filme)} />
                 </div>
